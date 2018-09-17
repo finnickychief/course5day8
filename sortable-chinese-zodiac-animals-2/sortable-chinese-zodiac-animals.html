@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <title>Sort Chinese Zodiac Animals</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <h1></h1>
+      <button onclick="loadJSON('json/animals.json')">AJAX LOAD JSON</button>
+      <button onclick="sortByKey('eng')">
+        <i class="fas fa-sort">&nbsp; ENGLISH</i></button>
+
+      <button onclick="sortByKey('pin')"> <i class="fas fa-sort">&nbsp; PINYIN</i></button>
+      </button>
+      <button onclick="sortByKey('year')"> <i class="fas fa-sort">&nbsp; YEAR</i></button>
+      </button>
+
+    </header>
+    <div id="app"></div>
+  </div>
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

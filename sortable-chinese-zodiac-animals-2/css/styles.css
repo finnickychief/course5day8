@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body {
+  background-color: #aaa;
+  font-family: sans-serif;
+  text-align: center;
+  color: #555;
+}
+
+.container {
+  width: 1300px;
+  margin: 20px auto;
+  min-height: 750px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+header {
+  margin: 0 auto;
+}
+
+button {
+  width: 250px;
+  padding: 10px;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #555;
+}
+
+#app {
+  width: 90%;
+  padding: 15px;
+  min-height: 500px;
+  background-color: #ccc;
+  margin: 20px auto;
+}
+
+.divvy {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin: 15px;
+  text-align: left;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.pic {
+  width: 70px;
+  margin: 5px 20px;
+}
+
+.en {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.pn {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #900;
+  margin: 0 10px;
+}
+
+.spanny {
+  margin-left: 35px;
+  padding: 10px;
+  font-size: 1.25rem;
+}
