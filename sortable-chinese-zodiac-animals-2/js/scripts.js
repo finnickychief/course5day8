@@ -119,24 +119,25 @@ function playSound() {
 */
 function sortByKey(key) {
   if (sortObj['col'] === key) {
-    // Sort Descending
-    sortObj['order'] = 'DESC';
+    // If the key is the same as the last time a sort happened, Flip order
+    if (sortObj['order'] === 'ASC') {
+      sortObj['order'] = 'DESC';
+    } else {
+      sortObj['order'] = 'ASC';
+    }
   } else {
+    // Else, sort asc
     sortObj['col'] = key;
-    sortObj['order'] = 'DESC';
+    sortObj['order'] = 'ASC';
   }
 
   arry.sort((a, b) => {
-    // If it's already sorted by this key, flip the order
-    if (sortObj['col'] === key) {
-      if (sortObj['order'] === 'ASC') {
-        return a[key] < b[key] ? 1 : -1;
-      } else {
-        return a[key] > b[key] ? 1 : -1;
-      }
+    if (sortObj['order'] === 'ASC') {
+      return a[key] > b[key] ? 1 : -1; // Sort asc
     } else {
-      return a[key] > b[key] ? 1 : -1;
+      return a[key] < b[key] ? 1 : -1; // Sort desc
     }
+
     // If it's not sorted by this key, sort by this key in ASC order
   });
   console.log(sortObj);
