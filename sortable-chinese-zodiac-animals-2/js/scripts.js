@@ -120,11 +120,12 @@ function playSound() {
 function sortByKey(key) {
   if (sortObj['col'] === key) {
     // If the key is the same as the last time a sort happened, Flip order
-    if (sortObj['order'] === 'ASC') {
-      sortObj['order'] = 'DESC';
-    } else {
-      sortObj['order'] = 'ASC';
-    }
+    sortObj['order'] = sortObj['order'] === 'ASC' ? 'DESC' : 'ASC';
+    // if (sortObj['order'] === 'ASC') {
+    //   sortObj['order'] = 'DESC';
+    // } else {
+    //   sortObj['order'] = 'ASC';
+    // }
   } else {
     // Else, sort asc
     sortObj['col'] = key;
@@ -137,8 +138,6 @@ function sortByKey(key) {
     } else {
       return a[key] < b[key] ? 1 : -1; // Sort desc
     }
-
-    // If it's not sorted by this key, sort by this key in ASC order
   });
   console.log(sortObj);
   renderAll(arry);
